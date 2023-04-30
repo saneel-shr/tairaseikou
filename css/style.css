@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-gray {
+    background-color: whitesmoke;
+}
+
+.bgcolor {
+    background-color: rgb(64,81,85);
+}
+
+header {
+    height: 150px;
+    /* background-color: var(--screenwidth-corvid-background-color,rgba(var(255,255,255,var(255,255,255)),var(1,1))); */
+    background-image: url(../img/ironpatern.84ec58ff.png);
+    box-shadow: var(none,0 0 5px rgba(0,0,0,.7));
+}
+
+.info, .contact-info{
+    height: 250px;
+}
+
+.w-info {
+    height: 250px;
+    font-size: 1.5rem;
+}
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url("flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2") format('woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
