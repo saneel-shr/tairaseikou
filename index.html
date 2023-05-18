@@ -17,7 +17,7 @@
 
 <body>
     <div
-        class="w-full h-48 flex flex-col justify-center items-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-[url('images/pattern.png')]">
+        class="w-full h-48 flex flex-col justify-center items-center sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-[url('images/pattern.png')]">
         株式会社平精工 TAIRASEIKOU
     </div>
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -43,7 +43,7 @@
                             aria-current="page">ホーム</a>
                     </li>
                     <li class="p-2">
-                        <a href="company-information.html"
+                        <a href="/company-information.html"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">会社概要</a>
                     </li>
                     <li class="p-2">
@@ -59,58 +59,34 @@
         </div>
     </nav>
 
-    <!-- carousel -->
-    <div class="relative w-full h-80">
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative overflow-hidden sm:h-80 xl:h-80 2xl:h-80 bg-gray-300">
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
-            <div id="carousel-item-1" class="hidden duration-700 ease-in-out">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="images/slider/Banner-1.jpg"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 2 -->
-            <div id="carousel-item-2" class="hidden duration-700 ease-in-out">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="images/slider/Banner-2.jpg"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 3 -->
-            <div id="carousel-item-3" class="hidden duration-700 ease-in-out">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="images/slider/Banner-3.jpeg"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
         </div>
         <!-- Slider indicators -->
         <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-            <button id="carousel-indicator-1" type="button" class="w-3 h-3 rounded-full" aria-current="true"
-                aria-label="Slide 1"></button>
-            <button id="carousel-indicator-2" type="button" class="w-3 h-3 rounded-full" aria-current="false"
-                aria-label="Slide 2"></button>
-            <button id="carousel-indicator-3" type="button" class="w-3 h-3 rounded-full" aria-current="false"
-                aria-label="Slide 3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
         </div>
-        <!-- Slider controls -->
-        <button id="data-carousel-prev" type="button"
-            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
-            <span
-                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-                <span class="hidden">Previous</span>
-            </span>
-        </button>
-        <button id="data-carousel-next" type="button"
-            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
-            <span
-                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-                <span class="hidden">Next</span>
-            </span>
-        </button>
     </div>
 
     <div class="h-52 bg-slate-800 flex flex-col md:flex-row text-center text-lg text-white mt-1">
@@ -126,7 +102,7 @@
         class="grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-evenly overflow-hidden mt-1">
         <div>
             <div class="bg-gray-500">
-                <img src="images/front/image_1.png" class="w-full h-full" />
+                <img src="images/front/image_1.png" class="w-full h-full object-cover" />
             </div>
             <div>
                 <span class="flex font-medium underline items-center justify-center">
@@ -230,53 +206,7 @@
             </span>
         </div>
     </div>
-    </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-    <script>
-        const items = [
-            {
-                position: 0,
-                el: document.getElementById('carousel-item-1')
-            },
-            {
-                position: 1,
-                el: document.getElementById('carousel-item-2')
-            },
-            {
-                position: 2,
-                el: document.getElementById('carousel-item-3')
-            },
-        ];
-
-        const options = {
-            defaultPosition: 1,
-            interval: 3000,
-
-            indicators: {
-                activeClasses: 'bg-white dark:bg-gray-800',
-                inactiveClasses: 'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800',
-                items: [
-                    {
-                        position: 0,
-                        el: document.getElementById('carousel-indicator-1')
-                    },
-                    {
-                        position: 1,
-                        el: document.getElementById('carousel-indicator-2')
-                    },
-                    {
-                        position: 2,
-                        el: document.getElementById('carousel-indicator-3')
-                    },
-                ]
-            },
-        };
-
-        const carousel = new Carousel(items, options);
-        carousel.cycle()
-    </script>
 </body>
-
 </html>
